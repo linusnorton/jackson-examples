@@ -270,7 +270,6 @@ public class JavaTimeTest extends JsonTest {
         assertEquals("Y2018", doc.read("$.customYear", String.class));
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-modules-java8/issues/78
     @Test
     @DisplayName("Custom Year conversion json to object")
     public void customYearJsonToObject() throws IOException {

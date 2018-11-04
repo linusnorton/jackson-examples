@@ -50,6 +50,7 @@ public class UserTest extends JsonTest {
         String json = "{\"phone\":\"555 555 555\",\"user\":{\"name\":\"John Doe\"}}";
         User.ContactData object = toObject(json, User.ContactData.class);
         assertEquals("555 555 555", object.getPhone());
-        assertEquals(null, object.getUser());
+        assertEquals("John Doe", object.getUser().getName());
+        assertEquals(null, object.getUser().getContactData());
     }
 }

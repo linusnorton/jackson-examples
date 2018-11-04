@@ -72,14 +72,10 @@ Example that shows how to serialize and deserialize the classes of the `java.tim
 
 **IMPORTANT** We need to register the `JavaTimeModule` in the `ObjectMapper` instance. Additionally, we need to disable the property `WRITE_DATES_AS_TIMESTAMPS` to disable the conversion of the objects to milliseconds.
 
-**WARNING** This example contains failing tests that show some functionalities that are not supported yet.
-
 ## Joda Time
 
 Example that shows how to serialize and deserialize the classes of the `joda.time` library, it shows how to use the default formats and custom formats.
 
 **IMPORTANT** We need to register the `JodaTimeModule` in the `ObjectMapper` instance. Additionally, we need to disable the property `WRITE_DATES_AS_TIMESTAMPS` to disable the conversion of the objects to milliseconds.
-
-**WARNING** This example contains failing tests that show some functionalities that are not supported yet.
 
 **VERY IMPORTANT** Note that from Java SE 8 onwards, users are asked to migrate to `java.time` (JSR-310) - a core part of the JDK which replaces [Joda-Time](http://www.joda.org/joda-time/)

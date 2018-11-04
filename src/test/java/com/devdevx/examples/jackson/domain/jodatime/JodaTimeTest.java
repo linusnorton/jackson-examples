@@ -165,7 +165,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals(DATE_TIME, object.getCustomDateTime());
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom Instant conversion object to json")
     public void customInstantObjectToJson() throws JsonProcessingException {
@@ -176,7 +175,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals("01/01/2018 14_22_33_025|UTC", doc.read("$.customInstant", String.class));
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom Instant conversion json to object")
     public void customInstantJsonToObject() throws IOException {
@@ -185,7 +183,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals(INSTANT, object.getCustomInstant());
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom YearMonth conversion object to json")
     public void customYearMonthObjectToJson() throws JsonProcessingException {
@@ -196,7 +193,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals("2018/01", doc.read("$.customYearMonth", String.class));
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom YearMonth conversion json to object")
     public void customYearMonthJsonToObject() throws IOException {
@@ -205,7 +201,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals(YEAR_MONTH, object.getCustomYearMonth());
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom MonthDay conversion object to json")
     public void customMonthDayObjectToJson() throws JsonProcessingException {
@@ -216,7 +211,6 @@ public class JodaTimeTest extends JsonTest {
         assertEquals("01_14", doc.read("$.customMonthDay", String.class));
     }
 
-    // FIXME failing test, see https://github.com/FasterXML/jackson-datatype-joda/issues/101
     @Test
     @DisplayName("Custom MonthDay conversion json to object")
     public void customMonthDayJsonToObject() throws IOException {
