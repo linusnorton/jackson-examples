@@ -1,5 +1,9 @@
 package com.devdevx.examples.jackson.domain.flat;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 public class Person {
@@ -46,13 +50,15 @@ public class Person {
     public static class Address {
         public String street;
         private Integer number;
+        public Goat myGoat;
 
         private Address() {
         }
 
-        public Address(String street, Integer number) {
+        public Address(String street, Integer number, Goat myGoat) {
             this.street = street;
             this.number = number;
+            this.myGoat = myGoat;
         }
 
         public String getStreet() {
@@ -69,6 +75,35 @@ public class Person {
 
         public void setNumber(Integer number) {
             this.number = number;
+        }
+
+        public Goat getMyGoat() {
+            return myGoat;
+        }
+
+        public void setMyGoat(Goat myGoat) {
+            this.myGoat = myGoat;
+        }
+
+        public static class Goat {
+            public String value;
+
+            Goat() {
+
+            }
+
+            @JsonCreator
+            Goat(@JsonProperty("value") String value) {
+                this.value = value;
+            }
+
+            public String getValue() {
+                return value;
+            }
+
+            public void setValue(String value) {
+                this.value = value;
+            }
         }
     }
 }
