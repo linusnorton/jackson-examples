@@ -1,5 +1,9 @@
 package com.devdevx.examples.jackson.domain.flat;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 public class Person {
@@ -88,7 +92,8 @@ public class Person {
 
             }
 
-            Goat(String value) {
+            @JsonCreator
+            Goat(@JsonProperty("value") String value) {
                 this.value = value;
             }
 
